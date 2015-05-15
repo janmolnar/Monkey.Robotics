@@ -57,6 +57,16 @@ namespace Robotics.Micro.Core.Netduino2Tests
                     var.SetValue(-1);
             }
 
+
+			// Sensors
+			var sharp = new SharpGP2D12 ();
+
+			var a0 = new AnalogInputPin (AnalogChannels.ANALOG_PIN_A0);
+			a0.Analog.ConnectTo (sharp.AnalogInput);
+			//scope.ConnectTo (sharp.DistanceOutput);
+			sharp.DistanceOutput.ConnectTo(server, name: "Distance");
+
+
             //
             // Show diagnostics
             //
