@@ -22,7 +22,7 @@ namespace Robotics.Micro.Core.Netduino2Tests
             //
             // initialize the serial port for COM1 (using D0 & D1)
             // initialize the serial port for COM3 (using D7 & D8)
-            var serialPort = new SerialPort (SerialPorts.COM3, 57600, Parity.None, 8, StopBits.One);
+            var serialPort = new SerialPort(SerialPorts.COM3, 19200, Parity.None, 8, StopBits.One);
             serialPort.Open ();
             var server = new ControlServer (serialPort);
 
@@ -50,6 +50,12 @@ namespace Robotics.Micro.Core.Netduino2Tests
 
             leftMotor.SpeedInput.ConnectTo (server);
             rightMotor.SpeedInput.ConnectTo (server);
+
+            foreach (ControlServer.ServerVariable var in server.Variables)
+            {
+                if (var.Name == "Speed")
+                    var.SetValue(-1);
+            }
 
             //
             // Show diagnostics

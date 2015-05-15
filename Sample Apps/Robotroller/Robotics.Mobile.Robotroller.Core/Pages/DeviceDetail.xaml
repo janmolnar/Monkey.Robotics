@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <TabbedPage xmlns="http://xamarin.com/schemas/2014/forms" 
 			 xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
 			 xmlns:local="clr-namespace:Robotics.Mobile.Robotroller;assembly=Robotics.Mobile.Robotroller"
@@ -49,6 +49,7 @@
 				<Label Text="Rolling the phone from side to side causes turning."/>
 				<Label Text="" x:Name="JoystickOutputSpeed" />
 				<Label Text="" x:Name="JoystickOutputTurn" />
+				<Switch x:Name="ReverseSwitch" />
 			</StackLayout>
 		</Frame>
 	</ContentPage>

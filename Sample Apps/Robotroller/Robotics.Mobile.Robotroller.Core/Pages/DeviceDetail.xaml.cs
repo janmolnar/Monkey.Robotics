@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Linq;
@@ -107,15 +107,19 @@ namespace Robotics.Mobile.Robotroller
 						if (client == null)
 							return;
 
-						var speed = Math.Cos (Math.Max (0, Math.Min (Math.PI / 2, g.Pitch)));
-//						Debug.WriteLine ("Gyro.Pitch = " + g.Pitch + ", Speed = " + speed);
+						var speed = Math.Min(1, Math.Max(Math.Cos (g.Pitch),0));
+						Debug.WriteLine ("Gyro.Pitch = " + g.Pitch + ", Speed = " + speed);
 
 						var turn = Math.Sin (Math.Max (-Math.PI / 2, Math.Min (Math.PI / 2, g.Roll)));
 //						Debug.WriteLine ("Gyro.Roll = " + g.Roll + ", Turn = " + turn);
 
+						if (ReverseSwitch.IsToggled) {
+							speed = -speed;
+						}
+
 						var speedVariable = client.Variables.FirstOrDefault (x => x.Name == "Speed");
 						if (speedVariable != null) {
-							speedVariable.Value = speed;
+							speedVariable.Value = (1+speed)/2;
 						}
 
 						var turnVariable = client.Variables.FirstOrDefault (x => x.Name == "Turn");
