@@ -69,7 +69,7 @@ namespace Robotics.Micro.Motors
                 PwmDutyCycleOutput.Value = 0;
             }
             else {
-                var calSpeed = SpeedInput.Value * CalibrationInput.Value;
+                var calSpeed = 2*SpeedInput.Value * CalibrationInput.Value-1;
                 var speed = System.Math.Min (System.Math.Abs (calSpeed), 1);
                 var rev = calSpeed < 0;
                 
