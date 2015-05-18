@@ -57,8 +57,8 @@ namespace Robotics.Micro.Core.Netduino2Tests
             //        var.SetValue(-1);
             //}
 
-            var a0 = new AnalogInputPin(AnalogChannels.ANALOG_PIN_A0, 10);
-            var a1 = new AnalogInputPin(AnalogChannels.ANALOG_PIN_A1, 10);
+            var a0 = new AnalogInputPin(AnalogChannels.ANALOG_PIN_A0, 2);
+            var a1 = new AnalogInputPin(AnalogChannels.ANALOG_PIN_A1, 2);
 
             var sharp1 = new SharpGP2D12();
             a0.Analog.ConnectTo(sharp1.AnalogInput);
