@@ -37,7 +37,7 @@ namespace Robotics.Micro.Core.Netduino2Tests
             this.rightMotor = rightMotor;
 
             DirectionInput = AddInput ("DirectionInput", Units.Scalar);
-            SpeedInput = AddInput ("SpeedInput", Units.Ratio);
+            SpeedInput = AddInput ("SpeedInput", Units.Scalar);
             SpinInput = AddInput ("SpinInput", Units.Scalar);
 
             Update ();
@@ -69,7 +69,7 @@ namespace Robotics.Micro.Core.Netduino2Tests
 
                 // The motors always move forwards
                 var dir = System.Math.Max (System.Math.Min (DirectionInput.Value, 1), -1);
-                var spd = System.Math.Max (System.Math.Min (SpeedInput.Value, 1), 0);
+                var spd = System.Math.Max (System.Math.Min (SpeedInput.Value, 1), -1);
 
                 if (System.Math.Abs (dir) < 0.01) {
                     leftMotor.SpeedInput.Value = spd;
