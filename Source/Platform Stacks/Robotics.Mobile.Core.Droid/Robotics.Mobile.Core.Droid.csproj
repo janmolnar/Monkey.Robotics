@@ -43,7 +43,6 @@
     <Reference Include="Mono.Android" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Resources\Resource.designer.cs" />
     <Compile Include="Bluetooth\LE\Device.cs" />
     <Compile Include="Bluetooth\LE\Characteristic.cs" />
     <Compile Include="Bluetooth\LE\Descriptor.cs" />
@@ -58,10 +57,6 @@
     <AndroidResource Include="Resources\values\Strings.xml" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Novell\Novell.MonoDroid.CSharp.targets" />
-  <ItemGroup>
-    <Folder Include="Bluetooth\" />
-    <Folder Include="Bluetooth\LE\" />
-  </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Robotics.Mobile.Core\Robotics.Mobile.Core.csproj">
       <Project>{65733427-B647-4556-A87C-20937496780A}</Project>

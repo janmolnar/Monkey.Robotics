@@ -174,7 +174,4 @@ Global
 		{EC6A5B67-5128-4F0B-A74D-E234F6A57476} = {70D60FAE-6E12-4883-B30C-9616822B905B}
 		{9146775A-E315-4CEB-9CB2-3DBFC9D9A58C} = {70D60FAE-6E12-4883-B30C-9616822B905B}
 	EndGlobalSection
-	GlobalSection(MonoDevelopProperties) = preSolution
-		StartupItem = Robotics.Micro.Core.Netduino2Tests\Robotics.Micro.Robotroller.Netduino.csproj
-	EndGlobalSection
 EndGlobal

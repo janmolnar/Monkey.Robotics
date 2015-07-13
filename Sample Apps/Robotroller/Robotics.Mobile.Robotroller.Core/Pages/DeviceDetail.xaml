@@ -50,7 +50,11 @@
 				<Label Text="" x:Name="JoystickOutputSpeed" />
 				<Label Text="" x:Name="JoystickOutputTurn" />
 				<Switch x:Name="ReverseSwitch" />
+				<BoxView Color="Transparent" />
+			<Label Text="Speed" />
+			<Slider Minimum="0" Maximum="1" x:Name="SpeedJanSlider" ValueChanged="OnSlidersJanChanged" />
 			</StackLayout>
+
 		</Frame>
 	</ContentPage>
 
