@@ -51,11 +51,11 @@ namespace Robotics.Micro.Core.Netduino2Tests
             leftMotor.SpeedInput.ConnectTo (server);
             rightMotor.SpeedInput.ConnectTo (server);
 
-            foreach (ControlServer.ServerVariable var in server.Variables)
+            /*foreach (ControlServer.ServerVariable var in server.Variables)
             {
                 if (var.Name == "Speed")
                     var.SetValue(-1);
-            }
+            }*/
 
 
 			// Sensors

@@ -35,6 +35,8 @@ namespace Robotics.Mobile.Robotroller
 			};
 
 			Task.Factory.StartNew (CommunicationWorker);
+
+
 		}
 
 		private double SpeedValue;
